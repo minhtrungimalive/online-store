@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="10px" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>back arrow</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Photographer-register-2" transform="translate(-351.000000, -917.000000)" fill="#1D2332">
+            <path d="M366.206,921.29225 L362.207,917.29325 C361.816,916.90225 361.183,916.90225 360.793,917.29325 C360.402,917.68425 360.402,918.31625 360.793,918.70725 L363.086,921.00025 L352,921.00025 C351.447,921.00025 351,921.44725 351,922.00025 C351,922.55225 351.447,923.00025 352,923.00025 L363.086,923.00025 L360.793,925.29325 C360.402,925.68425 360.402,926.31625 360.793,926.70725 C360.988,926.90225 361.244,927.00025 361.5,927.00025 C361.756,927.00025 362.012,926.90225 362.207,926.70725 L366.206,922.70725 C366.592,922.32125 366.597,921.68425 366.206,921.29225" id="back-arrow" transform="translate(358.748689, 922.000125) scale(-1, 1) translate(-358.748689, -922.000125) "></path>
+        </g>
+    </g>
+</svg>
