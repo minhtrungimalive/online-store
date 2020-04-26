@@ -1,4 +1,5 @@
 const PHOTO_CART_KEY = 'TRAVELPIX_PHOTO_CART_KEY';
+const PRODUCT_LIST_CART_KEY = 'PRODUCT_LIST_CART_KEY';
 
 const setDataLocalByKey = (key: string, data: string) => {
   localStorage.setItem(key, data);
@@ -21,4 +22,4 @@ const removeDataLocalByKey = (key: string) => {
   }
 };
 
-export { PHOTO_CART_KEY, setDataLocalByKey, getDataLocalByKey, checkExistingKey, removeDataLocalByKey };
+export { PHOTO_CART_KEY, PRODUCT_LIST_CART_KEY, setDataLocalByKey, getDataLocalByKey, checkExistingKey, removeDataLocalByKey };

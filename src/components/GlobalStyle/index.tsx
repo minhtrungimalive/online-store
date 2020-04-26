@@ -48,6 +48,16 @@ const GlobalStyle: React.FunctionComponent<{}> = () => {
         body {
           font-family: RubikRegular;
           color: #1e2433;
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+
+          *::before,
+          *::after {
+            box-sizing: border-box;
+          }
         }
         :root {
           font-size: 16px;

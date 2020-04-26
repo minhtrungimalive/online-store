@@ -5,7 +5,10 @@ import galleryReducer from './gallery/reducer';
 import { AuthState } from './auth/model';
 import authSaga from './auth/saga';
 import gallerySaga from './gallery/saga';
+import productReducer from './product/reducer';
 import { GalleryState } from './gallery/model';
+import { ProductState } from './product/model';
+import productSaga from './product/saga';
 
 export interface ActionBase {
   type: string;
@@ -21,15 +24,17 @@ export interface ErrorBase {
 export interface RootState {
   authReducer: AuthState;
   galleryReducer: GalleryState;
+  productReducer: ProductState;
 }
 
 const rootReducer = combineReducers<RootState, ActionBase>({
   authReducer,
   galleryReducer,
+  productReducer,
 });
 
 function* rootSaga() {
-  yield all([fork(authSaga), fork(gallerySaga)]);
+  yield all([fork(authSaga), fork(gallerySaga), fork(productSaga)]);
 }
 
 export { rootReducer, rootSaga };
