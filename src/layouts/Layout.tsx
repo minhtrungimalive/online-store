@@ -16,17 +16,7 @@ interface LayoutProps {
 }
 
 const Layout: FunctionComponent<LayoutProps> = props => {
-  const {
-    children,
-    isLandingPage,
-    onRefEvent,
-    isClientPage,
-    isPhotographerPage,
-    isGuestPage,
-    isRegisterPage,
-    isFAQPage,
-    isCheckoutPage,
-  } = props;
+  const { children, onRefEvent, isRegisterPage } = props;
   return (
     <>
       <GlobalStyle />
@@ -36,7 +26,7 @@ const Layout: FunctionComponent<LayoutProps> = props => {
           onRefEvent(r);
         }}
       >
-        <Header
+        {/* <Header
           isLandingPage={isLandingPage}
           isClientPage={isClientPage}
           isPhotographerPage={isPhotographerPage}
@@ -44,7 +34,8 @@ const Layout: FunctionComponent<LayoutProps> = props => {
           isRegisterPage={isRegisterPage}
           isFAQPage={isFAQPage}
           isCheckoutPage={isCheckoutPage}
-        />
+        /> */}
+        <Header />
         {children}
         {isRegisterPage ? <FooterRegisterPage /> : <Footer />}
       </ContainerStyle>

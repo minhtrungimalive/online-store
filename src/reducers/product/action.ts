@@ -1,0 +1,67 @@
+import { ActionBase } from '..';
+import { ProductSource } from './model';
+
+const BASE_ACTION = '@product';
+
+const GET_PRODUCT_LIST_REQUEST = `${BASE_ACTION}/GET_PRODUCT_LIST_REQUEST`;
+const GET_PRODUCT_LIST_FAILED = `${BASE_ACTION}/GET_PRODUCT_LIST_FAILED`;
+const GET_PRODUCT_LIST_SUCCCESS = `${BASE_ACTION}/GET_PRODUCT_LIST_SUCCCESS`;
+
+const ADD_PRODUCT_TO_CART_REQUEST = `${BASE_ACTION}/ADD_PRODUCT_TO_CART_REQUEST`;
+const ADD_PRODUCT_TO_CART_SUCCESS = `${BASE_ACTION}/ADD_PRODUCT_TO_CART_SUCCESS`;
+
+const GET_PRODUCT_FROM_CART_REQUEST = `${BASE_ACTION}/GET_PRODUCT_FROM_CART_REQUEST`;
+const GET_PRODUCT_FROM_CART_SUCCESS = `${BASE_ACTION}/GET_PRODUCT_FROM_CART_SUCCESS`;
+
+const REMOVE_PRODUCT_FROM_CART_REQUEST = `${BASE_ACTION}/REMOVE_PRODUCT_FROM_CART_REQUEST`;
+const REMOVE_PRODUCT_FROM_CART_SUCCESS = `${BASE_ACTION}/REMOVE_PRODUCT_FROM_CART_SUCCESS`;
+
+const SAVE_REF_REQUEST = `${BASE_ACTION}/SAVE_REF_REQUEST`;
+const SAVE_REF_SUCCESS = `${BASE_ACTION}/SAVE_REF_SUCCESS`;
+
+const getProductGallery = (): ActionBase => ({
+  type: GET_PRODUCT_LIST_REQUEST,
+  payload: null,
+});
+
+const addProductToCart = (imgInfo: ProductSource): ActionBase => ({
+  type: ADD_PRODUCT_TO_CART_REQUEST,
+  payload: imgInfo,
+});
+
+const removeProductToCart = (id: string): ActionBase => ({
+  type: REMOVE_PRODUCT_FROM_CART_REQUEST,
+  payload: id,
+});
+
+const getProductFromCart = (): ActionBase => ({
+  type: GET_PRODUCT_FROM_CART_REQUEST,
+  payload: null,
+});
+
+const saveRef = (name: string, ref: HTMLElement): ActionBase => ({
+  type: SAVE_REF_REQUEST,
+  payload: {
+    name,
+    ref,
+  },
+});
+
+export {
+  GET_PRODUCT_LIST_REQUEST,
+  GET_PRODUCT_LIST_FAILED,
+  GET_PRODUCT_LIST_SUCCCESS,
+  ADD_PRODUCT_TO_CART_REQUEST,
+  ADD_PRODUCT_TO_CART_SUCCESS,
+  REMOVE_PRODUCT_FROM_CART_REQUEST,
+  REMOVE_PRODUCT_FROM_CART_SUCCESS,
+  GET_PRODUCT_FROM_CART_REQUEST,
+  GET_PRODUCT_FROM_CART_SUCCESS,
+  SAVE_REF_REQUEST,
+  SAVE_REF_SUCCESS,
+  getProductGallery,
+  saveRef,
+  addProductToCart,
+  removeProductToCart,
+  getProductFromCart,
+};

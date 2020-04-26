@@ -1,5 +1,6 @@
 import { AuthParam } from '../reducers/auth/model';
 import { ImageSource } from '../reducers/gallery/model';
+import { ProductSource } from '../reducers/product/model';
 
 export const getAuthMock = (param?: AuthParam) => {
   return new Promise((resolve, reject) => {
@@ -187,5 +188,45 @@ export const getImageGalleryMock = () => {
         data: sources,
       });
     }, 2000);
+  });
+};
+
+export const getProductList = () => {
+  return new Promise(resolve => {
+    const sources: ProductSource[] = [
+      {
+        id: 'uuid1',
+        name: 'Iphone 11 Pro 256GB',
+        imgUrl: 'https://bizweb.dktcdn.net/100/318/659/products/iphone-11-pro-midnight-green.png?v=1568190839663',
+        description: 'New product of apple in 2020 with performance strong.',
+        discount: 10,
+        price: 32000000,
+      },
+      {
+        id: 'uuid2',
+        name: 'Iphone X 256GB',
+        imgUrl:
+          'https://thumbnail.imgbin.com/7/25/0/imgbin-iphone-x-iphone-8-iphone-7-iphone-4s-iphone-6s-apple-5Xfs0QnRqhwA1YM0Vc2cuBXFG_t.jpg',
+        description: 'Iphone X is new product of apple in 2018.',
+        discount: 10,
+        price: 32000000,
+      },
+      {
+        id: 'uuid3',
+        name: 'Samsung Z Flip',
+        imgUrl: `https://www.google.com/url?sa=i&url=https%3A%2F%2Fvi.wikipedia.org%2Fwiki%2FSamsung_Galaxy_Z_Flip&psig=AOvVaw1Nd02H2Z8wgu1kFGnaD_K
+        Q&ust=1587369143017000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJDCyIKB9OgCFQAAAAAdAAAAABANH`,
+        description: 'Iphone X is new product of apple in 2018.',
+        discount: 0,
+        price: 38000000,
+      },
+    ];
+
+    setTimeout(() => {
+      resolve({
+        data: sources,
+      });
+    }, 1000);
+    console.log('sources', sources);
   });
 };

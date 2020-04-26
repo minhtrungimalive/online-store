@@ -29,6 +29,10 @@ exports.createPages = ({ actions }) => {
       path: '/gallery',
       component: dirRouteParser(BASE_DIR, 'GalleryPage'),
     },
+    {
+      path: '/detail',
+      component: dirRouteParser(BASE_DIR, 'DetailPage'),
+    },
   ];
   rootRoutes.forEach(route => {
     createPage({
