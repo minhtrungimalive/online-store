@@ -33,6 +33,10 @@ exports.createPages = ({ actions }) => {
       path: '/detail',
       component: dirRouteParser(BASE_DIR, 'DetailPage'),
     },
+    {
+      path: '/payment',
+      component: dirRouteParser(BASE_DIR, 'PaymentPage'),
+    },
   ];
   rootRoutes.forEach(route => {
     createPage({

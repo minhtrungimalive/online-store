@@ -227,6 +227,5 @@ export const getProductList = () => {
         data: sources,
       });
     }, 1000);
-    console.log('sources', sources);
   });
 };

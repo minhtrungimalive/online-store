@@ -3,9 +3,11 @@ import styled from '@emotion/styled';
 const ContainerStyle = styled.div`
   height: 100%;
   width: 100%;
+
   position: fixed;
   display: flex;
   flex-direction: column;
+  align-items: center;
   overflow: auto;
 `;
 
